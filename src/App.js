@@ -9,6 +9,7 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
+import HomePage from './components/Home/HomePage'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -36,20 +37,26 @@ const App = () => {
       <main className='container'>
         <Routes>
           <Route
+            exact path='/'
+            element={
+              <HomePage user={user}/>
+            }
+          />
+          <Route
             path='/sign-up'
-            element={<SignUp msgAlert={msgAlert} setUser={setUser} /> }
+            element={<SignUp msgAlert={msgAlert} setUser={setUser} />}
           />
           <Route
             path='/sign-in'
-            element={<SignIn msgAlert={msgAlert} setUser={setUser} /> }
+            element={<SignIn msgAlert={msgAlert} setUser={setUser} />}
           />
           <Route
             path='/sign-out'
-            element={<SignOut msgAlert={msgAlert} clearUser={clearUser} user={user} /> }
+            element={<SignOut msgAlert={msgAlert} clearUser={clearUser} user={user} />}
           />
           <Route
             path='/change-password'
-            element={<ChangePassword msgAlert={msgAlert} user={user} /> }
+            element={<ChangePassword msgAlert={msgAlert} user={user} />}
           />
 
         </Routes>

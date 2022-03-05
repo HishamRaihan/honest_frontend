@@ -8,7 +8,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 const SignIn = ({ msgAlert, setUser }) => {
-  const [email, setEmail] = useState('')
+  const [username, setUserName] = useState('')
   const [password, setPassword] = useState('')
   const [shouldNavigate, setShouldNavigate] = useState(false)
 
@@ -16,7 +16,7 @@ const SignIn = ({ msgAlert, setUser }) => {
     event.preventDefault()
 
     try {
-      const res = await signIn(email, password)
+      const res = await signIn(username, password)
       setUser(res.data.user)
 
       msgAlert({
@@ -26,7 +26,7 @@ const SignIn = ({ msgAlert, setUser }) => {
       })
       setShouldNavigate(true)
     } catch (error) {
-      setEmail('')
+      setUserName('')
       setPassword('')
       msgAlert({
         heading: 'Sign In Failed with error: ' + error.message,
@@ -45,15 +45,15 @@ const SignIn = ({ msgAlert, setUser }) => {
       <div className='col-sm-10 col-md-8 mx-auto mt-5'>
         <h3>Sign In</h3>
         <Form onSubmit={onSignIn}>
-          <Form.Group controlId='email'>
+          <Form.Group controlId='username'>
             <Form.Label>Email address</Form.Label>
             <Form.Control
               required
-              type='email'
-              name='email'
-              value={email}
-              placeholder='Enter email'
-              onChange={event => setEmail(event.target.value)}
+              type='text'
+              // name='email'
+              value={username}
+              placeholder='Enter Username'
+              onChange={event => setUserName(event.target.value)}
             />
           </Form.Group>
           <Form.Group controlId='password'>
