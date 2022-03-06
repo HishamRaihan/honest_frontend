@@ -10,6 +10,7 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import HomePage from './components/Home/HomePage'
+import IndexJobs from './components/jobs/IndexJobs'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -39,7 +40,7 @@ const App = () => {
           <Route
             exact path='/'
             element={
-              <HomePage user={user}/>
+              <HomePage user={user} />
             }
           />
           <Route
@@ -58,7 +59,10 @@ const App = () => {
             path='/change-password'
             element={<ChangePassword msgAlert={msgAlert} user={user} />}
           />
-
+          <Route
+            path='/jobs'
+            element={<IndexJobs user={user} />}
+          />
         </Routes>
       </main>
     </>
