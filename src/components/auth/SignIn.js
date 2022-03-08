@@ -46,7 +46,7 @@ const SignIn = ({ msgAlert, setUser }) => {
         <h3>Sign In</h3>
         <Form onSubmit={onSignIn}>
           <Form.Group controlId='username'>
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>Username</Form.Label>
             <Form.Control
               required
               type='text'

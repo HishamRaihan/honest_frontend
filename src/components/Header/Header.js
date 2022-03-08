@@ -6,9 +6,12 @@ import { Link, NavLink } from 'react-router-dom'
 
 const authenticatedOptions = (
   <>
+    <NavLink to='/jobs/owner' className='nav-link '>My Job Board</NavLink>
+    <NavLink to='/jobs/create' className='nav-link '>Create Job</NavLink>
+    <NavLink to='/users/' className='nav-link makePost'>List of Users </NavLink>
+    <NavLink to='/jobs' className='nav-link '>All Jobs</NavLink>
     <NavLink to='/change-password' className='nav-link'>Change Password</NavLink>
     <NavLink to='/sign-out' className='nav-link'>Sign Out</NavLink>
-    <NavLink to='/jobs' className='nav-link '>Jobs</NavLink>
   </>
 )
 

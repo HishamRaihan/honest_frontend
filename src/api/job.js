@@ -55,7 +55,7 @@ export const deleteJob = (id, user) => {
 export const updateJob = (id, title, company, description, budget, date, user) => {
   return axios.patch(
     `${apiUrl}/jobs/${id}`,
-    { post: { title, company, description, budget, date } },
+    { job: { title, company, description, budget, date } },
     {
       headers: {
         Authorization: `Bearer ${user.token}`

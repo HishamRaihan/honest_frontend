@@ -10,7 +10,12 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import HomePage from './components/Home/HomePage'
-import IndexJobs from './components/jobs/IndexJobs'
+import IndexJobs from './components/jobs/Index/IndexJobs'
+import CreateJobs from './components/jobs/Create/CreateJob'
+import OneJob from './components/jobs/Show/OneJob'
+import AllUsers from './components/auth/IndexUsers'
+import AllJobsForOneUser from './components/jobs/AllForOneUser/AllJobsForOneUser'
+import EditJob from './components/jobs/Edit/EditJob'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -59,10 +64,35 @@ const App = () => {
             path='/change-password'
             element={<ChangePassword msgAlert={msgAlert} user={user} />}
           />
+
+          <Route
+            path='/users'
+            element={<AllUsers msgAlert={msgAlert} user={user}/>}
+          />
+
+          <Route
+            path='/jobs/create'
+            element={<CreateJobs msgAlert={msgAlert} user={user} />}
+          />
+          <Route
+            path='/jobs/owner'
+            element={<AllJobsForOneUser msgAlert={msgAlert} user={user} />}
+          />
+
+          <Route
+            path='/jobs/:id'
+            element={<OneJob msgAlert={msgAlert} user={user} />}
+          />
           <Route
             path='/jobs'
-            element={<IndexJobs user={user} />}
+            element={<IndexJobs msgAlert={msgAlert} user={user} />}
           />
+
+          <Route
+            path='/jobs/:id/edit'
+            element={<EditJob msgAlert={msgAlert} user={user} />}
+          />
+
         </Routes>
       </main>
     </>
