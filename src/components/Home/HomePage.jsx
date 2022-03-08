@@ -1,14 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import CarouselPage from '../Carousel/Carousel'
 import '../Home/Home.scss'
 
 const HomePage = (props) => {
   if (props.user) {
     return (
-      <div className='HomeWrapper'>
-
-        <h1>Make a Job Posting</h1>
-      </div>
+      <>
+        <div className='HomeWrapper'>
+          <h1>Welcome, {props.user.username}</h1>
+        </div>
+        <CarouselPage />
+      </>
     )
   } else {
     return (
