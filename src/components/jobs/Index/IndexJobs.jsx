@@ -49,7 +49,7 @@ const IndexJobs = ({ user, msgAlert }) => {
       </div>
       <div className="bottom">
         <h3>{job.owner.username}</h3>
-        <h4>{job.title}</h4>
+        <h4>{}</h4>
       </div>
       <h5>
         <Link to={`/jobs/${job._id}`}>{job.company}</Link>
