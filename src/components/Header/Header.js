@@ -4,14 +4,18 @@ import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import { Link, NavLink } from 'react-router-dom'
 import squeege from '../assets/squeege.png'
+// import { AiOutlineSetting } from 'react-icons/ai'
+import { FcHome } from 'react-icons/fc'
+import './Header.scss'
 
 const authenticatedOptions = (
   <>
-    <NavLink to='/jobs/owner' className='nav-link '>My Job Board</NavLink>
+    <NavLink to='/jobs/owner' className='nav-link '> Your Jobs </NavLink>
     <NavLink to='/jobs/create' className='nav-link '>Create Job</NavLink>
     <NavLink to='/users/' className='nav-link makePost'>List of Users </NavLink>
     <NavLink to='/jobs' className='nav-link '>All Jobs</NavLink>
-
+    {/* <FcEngineering />
+    <AiOutlineSetting className='settings' /> */}
     <NavLink to='/change-password' className='nav-link'>Change Password</NavLink>
     <NavLink to='/sign-out' className='nav-link'>Sign Out</NavLink>
 
@@ -27,7 +31,7 @@ const unauthenticatedOptions = (
 
 const alwaysOptions = (
   <>
-    <NavLink to='/' className='nav-link'>Home</NavLink>
+    <NavLink to='/' className='nav-link'> <FcHome /></NavLink>
   </>
 )
 

@@ -38,7 +38,19 @@ const IndexJobs = ({ user, msgAlert }) => {
     )
   }
   const jobList = jobs.map(job => (
-    <div className='jobs' key={job._id}>
+    <div className={job.featured ? 'card fetured' : 'card'} key={job._id}>
+      <div className="top">
+        <img className='left' alt="" />
+        <img className='user' alt="" />
+        <img className='right' alt="" />
+      </div>
+      <div className="center">
+        {job.description}
+      </div>
+      <div className="bottom">
+        <h3>{job.owner.username}</h3>
+        <h4>{job.title}</h4>
+      </div>
       <h5>
         <Link to={`/jobs/${job._id}`}>{job.company}</Link>
       </h5>
@@ -52,12 +64,13 @@ const IndexJobs = ({ user, msgAlert }) => {
   ))
 
   return (
-    <div className='row'>
-      <div className='col-sm-10 col-md-8 mx-auto mt-5'>
-        <h3>Job Board</h3>
-        <ul>{jobList}</ul>
+    <div className='jobs' id='jobs'>
+      <h1>Job Board</h1>
+      <div className='container'>
+        {jobList}
       </div>
     </div>
+
   )
 }
 
