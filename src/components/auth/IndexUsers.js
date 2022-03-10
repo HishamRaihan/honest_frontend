@@ -42,6 +42,7 @@ const AllUsers = ({ user, msgAlert }) => {
       <Link to={`/jobs/${user._id}`}></Link>
       <div className='bottom'>
         <h5>{user.username}</h5>
+        {/* <h4>{user.company}</h4> */}
 
       </div>
       <span className='jobDate'>Joined: {format(user.createdAt)}</span>

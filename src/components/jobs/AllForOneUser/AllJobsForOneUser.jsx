@@ -38,26 +38,42 @@ const AllJobsForOneUser = ({ user, msgAlert }) => {
     )
   }
   const jobList = usersJobs.map(job => (
-    <div className='jobs' key={job._id}>
-      <h5>
-        <Link to={`/jobs/${job._id}`}>{job.company}</Link>
-      </h5>
-      <h5>{job.title}</h5>
-      <span className='jobDate'>{format(job.createdAt)}</span>
-      <h6>{job.description}</h6>
+    <div className={job.featured ? 'card fetured' : 'card'} key={job._id}>
+      {/* <div className="top">
+        <img className='left' alt="" />
+        <img className='user' alt="" />
+        <img className='right' alt="" />
+      </div> */}
+      <div className="bottom">
+        <h3>
+          <Link className='link link-warning' to={`/jobs/${job._id}`}>{job.company}</Link>
+        </h3>
+        <h5>{job.title}</h5>
+        <div className="center">
+          {job.description}
+        </div>
+      </div>
+      {/* <h5>
+        {job.owner.username}
+      </h5> */}
+      <div className='dateWrapper'>
+        <h6>Start Date:</h6>
+        <JobDate date={job.date} />
+      </div>
       <h6>Budget: $ {job.budget} USD</h6>
-      <JobDate date={job.date} />
       {/* <h6>{job.owner.username} Job Posting</h6> */}
+      <span className='jobDate'> {job.owner.username} made a job: {format(job.createdAt)}</span>
     </div>
   ))
 
   return (
-    <div className='row'>
-      <div className='col-sm-10 col-md-8 mx-auto mt-5'>
-        <h3>Your Job Board</h3>
-        <ul>{jobList}</ul>
+    <div className='jobs mt-5' id='jobs'>
+      <h1>Job Board</h1>
+      <div className='container mt-5'>
+        {jobList}
       </div>
     </div>
+
   )
 }
 
