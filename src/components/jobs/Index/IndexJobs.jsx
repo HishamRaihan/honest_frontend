@@ -37,29 +37,33 @@ const IndexJobs = ({ user, msgAlert }) => {
       </Spinner>
     )
   }
+
   const jobList = jobs.map(job => (
     <div className={job.featured ? 'card fetured' : 'card'} key={job._id}>
-      <div className="top">
+      {/* <div className="top">
         <img className='left' alt="" />
         <img className='user' alt="" />
         <img className='right' alt="" />
-      </div>
-      <div className="center">
-        {job.description}
-      </div>
+      </div> */}
       <div className="bottom">
-        <h3>{job.owner.username}</h3>
-        <h4>{}</h4>
+        <h3>
+          <Link className='link' to={`/jobs/${job._id}`}>{job.company}</Link>
+        </h3>
+        <h5>{job.title}</h5>
+        <div className="center">
+          {job.description}
+        </div>
       </div>
-      <h5>
-        <Link to={`/jobs/${job._id}`}>{job.company}</Link>
-      </h5>
-      <h5>{job.title}</h5>
-      <span className='jobDate'>{format(job.createdAt)}</span>
-      <h6>{job.description}</h6>
+      {/* <h5>
+        {job.owner.username}
+      </h5> */}
+      <div className='dateWrapper'>
+        <h6>Start Date:</h6>
+        <JobDate date={job.date} />
+      </div>
       <h6>Budget: $ {job.budget} USD</h6>
-      <JobDate date={job.date} />
-      <h6>{job.owner.username} Job Posting</h6>
+      {/* <h6>{job.owner.username} Job Posting</h6> */}
+      <span className='jobDate'> {job.owner.username} made a job: {format(job.createdAt)}</span>
     </div>
   ))
 
