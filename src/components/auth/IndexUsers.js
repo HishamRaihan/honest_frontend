@@ -3,6 +3,7 @@ import { indexUser } from '../../api/auth'
 import { Link, Navigate } from 'react-router-dom'
 import { Spinner } from 'react-bootstrap'
 import { format } from 'timeago.js'
+import './IndexUsers.scss'
 
 const AllUsers = ({ user, msgAlert }) => {
   const [allUsers, setAllUsers] = useState([])
@@ -37,18 +38,24 @@ const AllUsers = ({ user, msgAlert }) => {
     )
   }
   const userList = allUsers.map(user => (
-    <div className='jobs' key={user._id}>
+    <div className={user.featured ? 'card fetured' : 'card'} key={user._id}>
       <Link to={`/jobs/${user._id}`}></Link>
-      <span className='jobDate'>{format(user.createdAt)}</span>
-      <h6>{user.username}</h6>
+      <div className='bottom'>
+        <h5>{user.username}</h5>
+
+      </div>
+      <span className='jobDate'>Joined: {format(user.createdAt)}</span>
+
     </div>
   ))
 
   return (
-    <div className='row'>
+    <div className='row mt-5'>
       <div className='col-sm-10 col-md-8 mx-auto mt-5'>
         <h3>All Users & Companies SOON!</h3>
-        <ul>{userList}</ul>
+        <div className='users mt-5'>
+          {userList}
+        </div>
       </div>
     </div>
   )

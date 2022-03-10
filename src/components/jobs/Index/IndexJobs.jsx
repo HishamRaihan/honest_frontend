@@ -47,7 +47,7 @@ const IndexJobs = ({ user, msgAlert }) => {
       </div> */}
       <div className="bottom">
         <h3>
-          <Link className='link' to={`/jobs/${job._id}`}>{job.company}</Link>
+          <Link className='link link-warning' to={`/jobs/${job._id}`}>{job.company}</Link>
         </h3>
         <h5>{job.title}</h5>
         <div className="center">

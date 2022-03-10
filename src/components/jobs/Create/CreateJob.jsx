@@ -40,8 +40,8 @@ const CreateJobs = ({ user, msgAlert }) => {
     return <Navigate to={`/jobs/${createdId}`} />
   }
   return (
-    <div className='row'>
-      <div className='col-md-3 mx-auto mt-5'>
+    <div className='row mt-5'>
+      <div className='form col-md-3 mx-auto mt-5'>
         <h3>Create Job Post</h3>
         <JobForm
           handleSubmit={handleSubmit}

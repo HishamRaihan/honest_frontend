@@ -63,22 +63,24 @@ const OneJob = ({ user, msgAlert }) => {
   } else {
     // We have a job, display it!
     return (
-      <div className='job'>
-        <div className='JobWrapper'>
-          <h3>{job.company}
-            <span className='jobDate'>{format(job.createdAt)}</span>
-          </h3>
-          <p>Job Description: {job.description}</p>
-          <h6>Budget of: $ {job.budget}</h6>
-          <span>
+      <div className="centerDiv">
+        <div className='job'>
+          <div className='JobWrapper'>
+            <h3>{job.company}
+            </h3>
+            <p>Job Description: {job.description}</p>
+            <h6>Budget of: $ {job.budget}</h6>
+            <span>
             Start Date:
-            <JobDate date={job.date}/>
-          </span>
-          <h6>{job.user}</h6>
-          <Link to={`/jobs/${id}/edit`}>
-            <Button className='Bttn' variant='primary' type='submit'>Update Job </Button>
-          </Link>
-          <Button className='Bttn' variant='danger' onClick={handleDeleteClick}>Delete Job </Button>
+              <JobDate date={job.date}/>
+            </span>
+            <span className='jobDate'>{format(job.createdAt)}</span>
+            <h6></h6>
+            <Link to={`/jobs/${id}/edit`}>
+              <Button className='Bttn m-5' variant='primary' type='submit'>Update Job </Button>
+            </Link>
+            <Button className='Bttn' variant='danger' onClick={handleDeleteClick}>Delete Job </Button>
+          </div>
         </div>
       </div>
     )

@@ -1,14 +1,22 @@
+
+.centerDiv{
+	display: flex;
+	justify-content: center;
+}
 .job {
-	width: 50%;
+	width: 40%;
 	border-radius: 10px;
 	-webkit-box-shadow: 7px 9px 3px -2px rgba(0, 0, 0, 0.29);
 	box-shadow: 7px 9px 3px -2px rgba(0, 0, 0, 0.29);
 	margin: 30px 0;
 	backdrop-filter: blur(5px);
+	      background-color: rgb(45, 43, 43);
+color: white;
+margin-top: 20rem;
 }
 
 .JobWrapper {
-	margin-top: 10rem;
+	// margin-top: 10rem;
 	padding: 10px;
 }
 

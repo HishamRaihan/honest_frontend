@@ -1,6 +1,7 @@
 import React from 'react'
 import { Form, Button } from 'react-bootstrap'
 // import { SendCheck } from 'react-bootstrap-icons'
+import './JobForm.scss'
 
 const JobForm = ({ handleSubmit, title, company, description, budget, date, setTitle, setCompany, setDescription, setBudget, setDate }) => (
   <Form onSubmit={handleSubmit}>
@@ -14,7 +15,7 @@ const JobForm = ({ handleSubmit, title, company, description, budget, date, setT
       />
     </Form.Group>
 
-    <Form.Group controlId='company'>
+    <Form.Group controlId='company' className='mt-3'>
       <Form.Label>Company</Form.Label>
       <Form.Control
         placeholder='Company Name'
@@ -24,9 +25,9 @@ const JobForm = ({ handleSubmit, title, company, description, budget, date, setT
       />
     </Form.Group>
 
-    <Form.Group controlId='description'>
+    <Form.Group controlId='description' className='mt-3'>
       <Form.Label>Description</Form.Label>
-      <Form.Control
+      <Form.Control className= 'textarea'as="textarea" row={5}
         placeholder='Please describe the job'
         name='description'
         value={description}
@@ -34,7 +35,7 @@ const JobForm = ({ handleSubmit, title, company, description, budget, date, setT
       />
     </Form.Group>
 
-    <Form.Group controlId='budget'>
+    <Form.Group controlId='budget' className='mt-3'>
       <Form.Label>Budget</Form.Label>
       <Form.Control
         placeholder="What's the budget?"
@@ -44,7 +45,7 @@ const JobForm = ({ handleSubmit, title, company, description, budget, date, setT
       />
     </Form.Group>
 
-    <Form.Group controlId='date'>
+    <Form.Group controlId='date' className='mt-3'>
       <Form.Label>Date</Form.Label>
       <Form.Control
         placeholder="When's the start date?"
@@ -55,8 +56,8 @@ const JobForm = ({ handleSubmit, title, company, description, budget, date, setT
       />
     </Form.Group>
 
-    <Button className='mt-2 Bttn' variant='primary' type='submit'>Submit Job Form</Button>
-    <div className='mt-5 footer' >We are pleased to be you partners</div>
+    <Button className='mt-4 Bttn' variant='warning' type='submit'>Submit Job Form</Button>
+    <div className='mt-3 footer' >We are pleased to be you partners</div>
   </Form>
 )
 export default JobForm

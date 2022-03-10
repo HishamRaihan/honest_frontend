@@ -1,9 +1,33 @@
 $mainColor : #14213d;
 
 $width: 768px;
-
+.page-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+.content-wrap{
+    flex: 1;
+    overflow: hidden;
+    background-color: mintcream;
+}
 @mixin mobile {
     @media (max-width: #{$width}){
         @content
     }
+}
+.box{
+   margin-top: 200px;
+}
+footer{
+    
+    background-color: rgb(45, 43, 43);
+
+}
+.col-sm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }

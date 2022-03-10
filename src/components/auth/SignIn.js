@@ -41,11 +41,11 @@ const SignIn = ({ msgAlert, setUser }) => {
   }
 
   return (
-    <div className='row'>
-      <div className='col-sm-10 col-md-8 mx-auto mt-5'>
+    <div className='row box'>
+      <div className='form col-md-2 mx-auto mt-5'>
         <h3>Sign In</h3>
         <Form onSubmit={onSignIn}>
-          <Form.Group controlId='username'>
+          <Form.Group controlId='username' className='mt-5'>
             <Form.Label>Username</Form.Label>
             <Form.Control
               required
@@ -56,7 +56,7 @@ const SignIn = ({ msgAlert, setUser }) => {
               onChange={event => setUserName(event.target.value)}
             />
           </Form.Group>
-          <Form.Group controlId='password'>
+          <Form.Group controlId='password' className='mt-5'>
             <Form.Label>Password</Form.Label>
             <Form.Control
               required
@@ -68,7 +68,7 @@ const SignIn = ({ msgAlert, setUser }) => {
               }
             />
           </Form.Group>
-          <Button className='mt-2' variant='primary' type='submit'>Submit</Button>
+          <Button className='mt-4' variant='primary' type='submit'>Submit</Button>
         </Form>
       </div>
     </div>

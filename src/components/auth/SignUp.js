@@ -45,11 +45,11 @@ const SignUp = ({ msgAlert, setUser }) => {
   }
 
   return (
-    <div className='row'>
-      <div className='col-sm-10 col-md-8 mx-auto mt-5'>
+    <div className='row box'>
+      <div className='form col-md-2 mx-auto mt-5'>
         <h3>User Registration</h3>
         <Form onSubmit={onSignUp}>
-          <Form.Group controlId='username'>
+          <Form.Group controlId='username' className='mt-3'>
             <Form.Label>Username</Form.Label>
             <Form.Control
               required
@@ -60,7 +60,7 @@ const SignUp = ({ msgAlert, setUser }) => {
               onChange={event => setUserName(event.target.value)}
             />
           </Form.Group>
-          <Form.Group controlId='email'>
+          <Form.Group controlId='email' className='mt-4'>
             <Form.Label>Email address</Form.Label>
             <Form.Control
               required
@@ -71,7 +71,7 @@ const SignUp = ({ msgAlert, setUser }) => {
               onChange={event => setEmail(event.target.value)}
             />
           </Form.Group>
-          <Form.Group controlId='password'>
+          <Form.Group controlId='password' className='mt-4'>
             <Form.Label>Password</Form.Label>
             <Form.Control
               required
@@ -82,7 +82,7 @@ const SignUp = ({ msgAlert, setUser }) => {
               onChange={event => setPassword(event.target.value)}
             />
           </Form.Group>
-          <Form.Group controlId='passwordConfirmation'>
+          <Form.Group controlId='passwordConfirmation' className='mt-4'>
             <Form.Label>Password Confirmation</Form.Label>
             <Form.Control
               required
@@ -93,7 +93,7 @@ const SignUp = ({ msgAlert, setUser }) => {
               onChange={event => setPasswordConfirmation(event.target.value)}
             />
           </Form.Group>
-          <Button className='mt-2' variant='primary' type='submit'>Submit</Button>
+          <Button className='mt-5' variant='primary' type='submit'>Submit</Button>
         </Form>
       </div>
     </div>
