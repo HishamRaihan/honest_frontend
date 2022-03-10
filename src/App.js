@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { v4 as uuid } from 'uuid'
+import './global.scss'
 
 import AutoDismissAlert from './components/AutoDismissAlert/AutoDismissAlert'
 import Header from './components/Header/Header'
@@ -16,6 +17,7 @@ import OneJob from './components/jobs/Show/OneJob'
 import AllUsers from './components/auth/IndexUsers'
 import AllJobsForOneUser from './components/jobs/AllForOneUser/AllJobsForOneUser'
 import EditJob from './components/jobs/Edit/EditJob'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -40,60 +42,63 @@ const App = () => {
           id={msgAlert.id}
         />
       ))}
-      <main className='container'>
-        <Routes>
-          <Route
-            exact path='/'
-            element={
-              <HomePage user={user} />
-            }
-          />
-          <Route
-            path='/sign-up'
-            element={<SignUp msgAlert={msgAlert} setUser={setUser} />}
-          />
-          <Route
-            path='/sign-in'
-            element={<SignIn msgAlert={msgAlert} setUser={setUser} />}
-          />
-          <Route
-            path='/sign-out'
-            element={<SignOut msgAlert={msgAlert} clearUser={clearUser} user={user} />}
-          />
-          <Route
-            path='/change-password'
-            element={<ChangePassword msgAlert={msgAlert} user={user} />}
-          />
+      <main className='page-container'>
+        <div className='content-wrap'>
 
-          <Route
-            path='/users'
-            element={<AllUsers msgAlert={msgAlert} user={user}/>}
-          />
+          <Routes>
+            <Route
+              exact path='/'
+              element={
+                <HomePage user={user} />
+              }
+            />
+            <Route
+              path='/sign-up'
+              element={<SignUp msgAlert={msgAlert} setUser={setUser} />}
+            />
+            <Route
+              path='/sign-in'
+              element={<SignIn msgAlert={msgAlert} setUser={setUser} />}
+            />
+            <Route
+              path='/sign-out'
+              element={<SignOut msgAlert={msgAlert} clearUser={clearUser} user={user} />}
+            />
+            <Route
+              path='/change-password'
+              element={<ChangePassword msgAlert={msgAlert} user={user} />}
+            />
 
-          <Route
-            path='/jobs/create'
-            element={<CreateJobs msgAlert={msgAlert} user={user} />}
-          />
-          <Route
-            path='/jobs/owner'
-            element={<AllJobsForOneUser msgAlert={msgAlert} user={user} />}
-          />
+            <Route
+              path='/users'
+              element={<AllUsers msgAlert={msgAlert} user={user}/>}
+            />
 
-          <Route
-            path='/jobs/:id'
-            element={<OneJob msgAlert={msgAlert} user={user} />}
-          />
-          <Route
-            path='/jobs'
-            element={<IndexJobs msgAlert={msgAlert} user={user} />}
-          />
+            <Route
+              path='/jobs/create'
+              element={<CreateJobs msgAlert={msgAlert} user={user} />}
+            />
+            <Route
+              path='/jobs/owner'
+              element={<AllJobsForOneUser msgAlert={msgAlert} user={user} />}
+            />
 
-          <Route
-            path='/jobs/:id/edit'
-            element={<EditJob msgAlert={msgAlert} user={user} />}
-          />
+            <Route
+              path='/jobs/:id'
+              element={<OneJob msgAlert={msgAlert} user={user} />}
+            />
+            <Route
+              path='/jobs'
+              element={<IndexJobs msgAlert={msgAlert} user={user} />}
+            />
 
-        </Routes>
+            <Route
+              path='/jobs/:id/edit'
+              element={<EditJob msgAlert={msgAlert} user={user} />}
+            />
+          </Routes>
+        </div>
+        <Footer />
       </main>
     </>
   )

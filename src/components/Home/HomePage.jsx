@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import CarouselPage from '../Carousel/Carousel'
 import '../Home/Home.scss'
 
@@ -16,14 +16,14 @@ const HomePage = (props) => {
   } else {
     return (
       <div className='HomePage'>
-        <h1>Hello Im Home</h1>
+        {/* <h1>Hello Im Home</h1>
         <p>Please Sign Up</p>
         <Link to='/sign-up'>
           <button>Sign up</button>
         </Link>
         <Link to='/sign-in'>
           <button>Sign in</button>
-        </Link>
+        </Link> */}
       </div>
     )
   }

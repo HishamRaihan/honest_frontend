@@ -24,20 +24,20 @@ const authenticatedOptions = (
 
 const unauthenticatedOptions = (
   <>
-    <NavLink to='/sign-up' className='nav-link'>Sign Up</NavLink>
+    <NavLink to='/sign-up' className='nav-link'>Register</NavLink>
     <NavLink to='/sign-in' className='nav-link'>Sign In</NavLink>
   </>
 )
 
 const alwaysOptions = (
   <>
-    <NavLink to='/' className='nav-link'> <FcHome /></NavLink>
+    <NavLink to='/' className='nav-link'> <FcHome title='Home'/></NavLink>
   </>
 )
 
 const Header = ({ user }) => (
   // into the navbar style={{ height: '50px' }}
-  <Navbar bg='primary' variant='dark' expand='md' >
+  <Navbar className='nav' variant='dark' expand='md' >
     <Container >
       <Navbar.Brand>
         {/* <img src={squeege} width='60px' height='60px' variant='light'/> */}
