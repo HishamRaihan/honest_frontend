@@ -39,11 +39,11 @@ const ChangePassword = ({ msgAlert, user }) => {
   }
 
   return (
-    <div className='row'>
-      <div className='col-sm-10 col-md-8 mx-auto mt-5'>
+    <div className='row mt-5'>
+      <div className='form col-md-2 mx-auto mt-5'>
         <h3>Change Password</h3>
         <Form onSubmit={onChangePassword}>
-          <Form.Group controlId='oldPassword'>
+          <Form.Group controlId='oldPassword' className='mt-5'>
             <Form.Label>Old password</Form.Label>
             <Form.Control
               required
@@ -54,7 +54,7 @@ const ChangePassword = ({ msgAlert, user }) => {
               onChange={event => setOldPassword(event.target.value)}
             />
           </Form.Group>
-          <Form.Group controlId='newPassword'>
+          <Form.Group controlId='newPassword' className='mt-5'>
             <Form.Label>New Password</Form.Label>
             <Form.Control
               required
@@ -66,7 +66,7 @@ const ChangePassword = ({ msgAlert, user }) => {
               }
             />
           </Form.Group>
-          <Button className='mt-2' variant='primary' type='submit'>Submit</Button>
+          <Button className='mt-4' variant='warning' type='submit'>Submit</Button>
         </Form>
       </div>
     </div>
