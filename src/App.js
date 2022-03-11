@@ -18,6 +18,7 @@ import AllUsers from './components/auth/IndexUsers'
 import AllJobsForOneUser from './components/jobs/AllForOneUser/AllJobsForOneUser'
 import EditJob from './components/jobs/Edit/EditJob'
 import Footer from './components/Footer/Footer'
+import video from '../src/components/assets/videos/nyc_night.mp4'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -44,7 +45,9 @@ const App = () => {
       ))}
       <main className='page-container'>
         <div className='content-wrap'>
-
+          <video autoPlay loop muted className='background-video'>
+            <source src={video} type='video/mp4' />
+          </video>
           <Routes>
             <Route
               exact path='/'

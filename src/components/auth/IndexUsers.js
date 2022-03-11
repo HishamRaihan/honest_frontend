@@ -53,7 +53,7 @@ const AllUsers = ({ user, msgAlert }) => {
   return (
     <div className='row mt-5'>
       <div className='col-sm-10 col-md-8 mx-auto mt-5'>
-        <h3>All Users & Companies SOON!</h3>
+        <h1>All Users On Honest Installs Job board</h1>
         <div className='users mt-5'>
           {userList}
         </div>

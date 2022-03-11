@@ -68,9 +68,9 @@ const IndexJobs = ({ user, msgAlert }) => {
   ))
 
   return (
-    <div className='jobs' id='jobs'>
+    <div className='jobs mt-5 ' id='jobs'>
       <h1>Job Board</h1>
-      <div className='container'>
+      <div className='container mt-5'>
         {jobList}
       </div>
     </div>
