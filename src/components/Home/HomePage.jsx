@@ -18,6 +18,10 @@ const HomePage = (props) => {
           {/* <img className='background-image' src={squeege} /> */}
           {/* <h1>Welcome to Honest Installs</h1>
           <p className="desc">Let us fulfill your visual needs</p> */}
+          <div className='home-title'>
+            <h1>Welcome to Honest Installs</h1>
+            <p className="desc">Let us fulfill your visual needs</p>
+          </div>
         </div>
         {/* <CarouselPage /> */}
       </>
@@ -27,10 +31,13 @@ const HomePage = (props) => {
 
       <div className='home-contaier'>
         <video autoPlay loop muted className='background-video'>
-          <source src={video} type='video/mp4'/>
+          <source src={video} type='video/mp4' />
         </video>
-        {/* <h1>Welcome to Honest Installs</h1>
-        <p className="desc">Let us fulfill your visual needs</p>
+        <div className='home-title'>
+          <h1>Welcome to Honest Installs</h1>
+          <p className="desc">Let us fulfill your visual needs</p>
+        </div>
+        {/*
         <div className='home-btns'>
           <Button
             className='btns'
