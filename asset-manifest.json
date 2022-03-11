@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/honest_frontend/static/css/main.6a47e117.chunk.css",
-    "main.js": "/honest_frontend/static/js/main.8946950a.chunk.js",
-    "main.js.map": "/honest_frontend/static/js/main.8946950a.chunk.js.map",
+    "main.css": "/honest_frontend/static/css/main.7b81d3f0.chunk.css",
+    "main.js": "/honest_frontend/static/js/main.af628374.chunk.js",
+    "main.js.map": "/honest_frontend/static/js/main.af628374.chunk.js.map",
     "runtime-main.js": "/honest_frontend/static/js/runtime-main.f3bd6d12.js",
     "runtime-main.js.map": "/honest_frontend/static/js/runtime-main.f3bd6d12.js.map",
-    "static/js/2.2fe951b5.chunk.js": "/honest_frontend/static/js/2.2fe951b5.chunk.js",
-    "static/js/2.2fe951b5.chunk.js.map": "/honest_frontend/static/js/2.2fe951b5.chunk.js.map",
+    "static/js/2.668cb1cb.chunk.js": "/honest_frontend/static/js/2.668cb1cb.chunk.js",
+    "static/js/2.668cb1cb.chunk.js.map": "/honest_frontend/static/js/2.668cb1cb.chunk.js.map",
     "index.html": "/honest_frontend/index.html",
-    "static/css/main.6a47e117.chunk.css.map": "/honest_frontend/static/css/main.6a47e117.chunk.css.map",
-    "static/js/2.2fe951b5.chunk.js.LICENSE.txt": "/honest_frontend/static/js/2.2fe951b5.chunk.js.LICENSE.txt",
+    "static/css/main.7b81d3f0.chunk.css.map": "/honest_frontend/static/css/main.7b81d3f0.chunk.css.map",
+    "static/js/2.668cb1cb.chunk.js.LICENSE.txt": "/honest_frontend/static/js/2.668cb1cb.chunk.js.LICENSE.txt",
     "static/media/nyc_night.819af56d.mp4": "/honest_frontend/static/media/nyc_night.819af56d.mp4",
     "static/media/squeege.fc1c1b23.png": "/honest_frontend/static/media/squeege.fc1c1b23.png"
   },
   "entrypoints": [
     "static/js/runtime-main.f3bd6d12.js",
-    "static/js/2.2fe951b5.chunk.js",
-    "static/css/main.6a47e117.chunk.css",
-    "static/js/main.8946950a.chunk.js"
+    "static/js/2.668cb1cb.chunk.js",
+    "static/css/main.7b81d3f0.chunk.css",
+    "static/js/main.af628374.chunk.js"
   ]
 }
