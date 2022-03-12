@@ -25,7 +25,7 @@ const OneJob = ({ user, msgAlert }) => {
       try {
         const res = await showJob(id, user)
         setJob(res.data.job)
-        console.log(user)
+        // console.log(user)
       } catch (error) {
         msgAlert({
           heading: 'Job failed to load this is coming from (Job.js Error)',

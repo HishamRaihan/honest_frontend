@@ -3,6 +3,7 @@ import React from 'react'
 // import CarouselPage from '../Carousel/Carousel'
 import './Home.scss'
 import video from '../assets/videos/nyc_night.mp4'
+import squeege from '../assets/white_squeege.png'
 // import { Button } from 'react-bootstrap'
 // import squeege from '../assets/squeege.png'
 
@@ -20,7 +21,8 @@ const HomePage = (props) => {
           <p className="desc">Let us fulfill your visual needs</p> */}
           <div className='home-title'>
             <h1>Welcome to Honest Installs</h1>
-            <p className="desc">Let us fulfill your visual needs</p>
+            <img src={squeege} className='squeege' alt="" />
+            <p className="desc">A Squeege is all we need</p>
           </div>
         </div>
         {/* <CarouselPage /> */}
@@ -35,7 +37,8 @@ const HomePage = (props) => {
         </video>
         <div className='home-title'>
           <h1>Welcome to Honest Installs</h1>
-          <p className="desc">Let us fulfill your visual needs</p>
+          <img src={squeege} className='squeege' alt="" />
+          <p className="desc">A Squeege is all we need</p>
         </div>
         {/*
         <div className='home-btns'>
