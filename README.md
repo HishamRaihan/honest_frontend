@@ -7,6 +7,12 @@ https://hishamraihan.github.io/honest_frontend/
 - We used JavaScript and React for the front-end while using Express Mongo/Mongoose  curl scirpts for the back-end.
 - To me it was much more than a project - it was a big learning experience.
 - Full Stack with custome API.
+
+## npm packages used
+- react-bootstrap-icons
+- timeago.js
+- react-responsive-carousel
+- react-currency-input-field
 ---
 ## Instructions
 MVP User Stories
