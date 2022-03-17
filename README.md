@@ -2,12 +2,12 @@
 # Honest Installs Job Board
 ---
 # Deployed Site
-https://hishamraihan.github.io/honest_frontend/
-https://dashboard.heroku.com/apps/dry-tundra-83070
+- https://hishamraihan.github.io/honest_frontend/
+- https://dashboard.heroku.com/apps/dry-tundra-83070
 
 # Repo Links
-https://github.com/HishamRaihan/honest_backend
-https://github.com/HishamRaihan/honest_frontend
+- https://github.com/HishamRaihan/honest_backend
+- https://github.com/HishamRaihan/honest_frontend
 
 ## The BackStory
 - This project has allowed us to incorporate everything we have learned in this bootcamp up until now.
@@ -66,3 +66,11 @@ Honest Installs Wireframe
 
  6. Client will be able to delete a post
  - once deleted client should not be able to see it them when fetching the job post.
+
+
+ # Unsolved Problems to be fixed in V2
+ 1. will have image upload of company logos
+ 2. will allow users to communicate with eachother
+ 3. will add if job had been picked up or not by install team
+ 4. will make the UI transition smoother 
+ 5. all card will have the same look and style
